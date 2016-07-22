@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ttdata?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">includeiostream</property>
+    <mapping resource="ttgs/api/database/models/Rooms.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Semesterunits.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Schools.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Units.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Departments.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Stages.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/University.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Courses.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Students.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Ttevents.hbm.xml"/>
+    <mapping resource="ttgs/api/database/models/Lecturers.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

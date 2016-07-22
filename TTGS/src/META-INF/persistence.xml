@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="TTGSPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>ttgs.api.database.controllers.AuthAssignment</class>
+    <class>ttgs.api.database.controllers.University</class>
+    <class>ttgs.api.database.controllers.Students</class>
+    <class>ttgs.api.database.controllers.Stages</class>
+    <class>ttgs.api.database.controllers.Unitsoflecturers</class>
+    <class>ttgs.api.database.controllers.Units</class>
+    <class>ttgs.api.database.controllers.User</class>
+    <class>ttgs.api.database.controllers.AuthRule</class>
+    <class>ttgs.api.database.controllers.Schools</class>
+    <class>ttgs.api.database.controllers.Semesterunits</class>
+    <class>ttgs.api.database.controllers.Ttevents</class>
+    <class>ttgs.api.database.controllers.Departments</class>
+    <class>ttgs.api.database.controllers.Courses</class>
+    <class>ttgs.api.database.controllers.Rooms</class>
+    <class>ttgs.api.database.controllers.Migration</class>
+    <class>ttgs.api.database.controllers.AuthItem</class>
+    <class>ttgs.api.database.controllers.Lecturers</class>
+    <class>ttgs.api.database.controllers.Amendments</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ttdata"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

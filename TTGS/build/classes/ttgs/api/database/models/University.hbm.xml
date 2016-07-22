@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2016 7:45:56 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ttgs.api.database.models.University" table="university" catalog="ttdata" optimistic-lock="version">
+        <id name="name" type="string">
+            <column name="name" length="200" />
+            <generator class="assigned" />
+        </id>
+        <property name="number" type="int">
+            <column name="number" not-null="true" />
+        </property>
+        <property name="startTime" type="time">
+            <column name="start_time" length="8" not-null="true" />
+        </property>
+        <property name="endTime" type="time">
+            <column name="end_time" length="8" not-null="true" />
+        </property>
+        <property name="lunchTime" type="time">
+            <column name="lunch_time" length="8" not-null="true" />
+        </property>
+        <property name="lectureDuration" type="time">
+            <column name="lecture_duration" length="8" not-null="true" />
+        </property>
+        <property name="lunchDuration" type="time">
+            <column name="lunch_duration" length="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2016 7:45:56 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ttgs.api.database.models.Lecturers" table="lecturers" catalog="ttdata" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <set name="tteventses" table="ttevents" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lecturerid" not-null="true" />
+            </key>
+            <one-to-many class="ttgs.api.database.models.Ttevents" />
+        </set>
+        <set name="semesterunitses" table="semesterunits" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="lecid" />
+            </key>
+            <one-to-many class="ttgs.api.database.models.Semesterunits" />
+        </set>
+    </class>
+</hibernate-mapping>

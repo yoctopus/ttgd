@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 30, 2016 7:45:56 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ttgs.api.database.models.Ttevents" table="ttevents" catalog="ttdata" optimistic-lock="version">
+        <id name="tteventid" type="java.lang.Integer">
+            <column name="tteventid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="lecturers" class="ttgs.api.database.models.Lecturers" fetch="select">
+            <column name="lecturerid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="rooms" class="ttgs.api.database.models.Rooms" fetch="select">
+            <column name="roomid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="semesterunits" class="ttgs.api.database.models.Semesterunits" fetch="select">
+            <column name="semunitid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="students" class="ttgs.api.database.models.Students" fetch="select">
+            <column name="studentid" not-null="true" />
+        </many-to-one>
+        <property name="timestart" type="timestamp">
+            <column name="timestart" length="19" not-null="true" />
+        </property>
+        <property name="timeend" type="timestamp">
+            <column name="timeend" length="19" not-null="true" />
+        </property>
+        <property name="day" type="string">
+            <column name="day" length="4" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

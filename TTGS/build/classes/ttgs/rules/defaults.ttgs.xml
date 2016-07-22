@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<defaults>
+    
+        <start >7:00</start>
+        <end >16:00</end>
+        <smallbreak >9:00</smallbreak>
+        <bigbreak >11:00</bigbreak>
+        <lunchbreak >13:00</lunchbreak>
+        <gamesbreak >16:00</gamesbreak>
+        <!-- time in mins -->
+        <lecture_duration >2:00</lecture_duration>
+        <lunch_duration >1:00</lunch_duration>
+        <big_break_duration >0:30</big_break_duration>
+        <small_break_duration >0:20</small_break_duration>
+
+   
+    
+        <name >Maseno University </name>
+        <schools >6</schools>
+     
+
+
+    
+    
+</defaults>	
+
+	
+
